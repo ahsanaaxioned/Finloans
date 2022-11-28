@@ -1,8 +1,6 @@
-@charset "utf-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -30,16 +28,19 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
-
-input[type='radio'] { vertical-align: text-bottom; }
+input[type=radio] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
-input[type='button'],
-input[type='submit'],
+input[type=button],
+input[type=submit],
 button {
   cursor: pointer;
 }
@@ -50,7 +51,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -66,30 +69,39 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
-
 .cf:before,
 .cf:after {
   display: table;
   content: " ";
 }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
 
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 li {
@@ -100,55 +112,124 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 79.55%;
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
 
+/*header css start here*/
+.btn-apply, .nav-link, .bar {
+  transition: all 0.3s ease-in-out;
+}
 
+.apply-btn, .nav-list, header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
+.apply-btn, header .wrapper {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  align-items: center;
+}
 
+.btn-link, .nav-icon {
+  position: relative;
+}
 
+header {
+  padding: 22px 0;
+}
+header .wrapper {
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
 
-/*=================================
-  Header styling ends here
-=================================*/  
+.bar {
+  width: 18px;
+  height: 2px;
+  margin: 5px;
+  display: block;
+  background-color: #fff;
+  text-indent: -9999px;
+}
 
-/*=================================
-  main styling starts here
-=================================*/
+.logo {
+  padding-left: 2.7%;
+  -ms-flex-preferred-size: 27.6%;
+  flex-basis: 27.6%;
+}
 
+.navbar {
+  -ms-flex-preferred-size: 44.5%;
+  flex-basis: 44.5%;
+}
 
+.nav-list {
+  gap: 22px;
+}
 
+.nav-link {
+  padding: 5px 5px;
+  color: #000;
+  font-size: 14px;
+}
+@media (min-width: 995px) {
+  .nav-link:hover {
+    color: #38ACB6;
+  }
+}
 
+.nav-icon::before {
+  content: "\f078";
+  float: right;
+  font-size: 10px;
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 7px;
+  right: -8px;
+}
 
+.apply-btn {
+  -ms-flex-preferred-size: 20.2%;
+  flex-basis: 20.2%;
+}
 
+.btn-link {
+  font-size: 13px;
+}
+.btn-link::before {
+  content: "\f095";
+  float: left;
+  position: absolute;
+  top: 2px;
+  left: -20px;
+  color: #38ACB6;
+  font-size: 12px;
+  font-family: "FontAwesome";
+}
 
+.btn-apply {
+  padding: 14px 9px;
+  border: 1px solid #38ACB6;
+  border-radius: 6px;
+  margin-left: 10px;
+  font-size: 13px;
+  color: #38ACB6;
+}
+@media (min-width: 995px) {
+  .btn-apply:hover {
+    color: #fff;
+  }
+}
 
-/*=================================
-  main styling ends here
-=================================*/
+/*header css end here*/
 
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+/*# sourceMappingURL=style.css.map */
