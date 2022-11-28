@@ -1,0 +1,239 @@
+/* banner section start here*/
+.banner {
+  padding: 205px 0 201px 0;
+  @include position(relative, $top: 0, $left: 0);
+  background: rgba(0, 0, 0, 0.2) url("https://extension.harvard.edu/wp-content/uploads/sites/8/2020/10/finance-1536x918.jpg")center no-repeat;
+  background-size: cover;
+
+  .wrapper {
+    @extend %flex-repeat;
+    @extend %align-repeat;
+    @include justify-content(space-between);
+
+    @at-root {
+      .banner-content {
+        @include flex-basis(47%);
+      }
+
+      .banner-heading {
+        color: $white;
+        @include font(60px);
+      }
+
+      .banner-btn {
+        padding-top: 41px;
+      }
+
+      .banner-link {
+        padding: 16px 34px;
+        border: 1px solid $btn-color;
+        border-radius: 6px;
+        background-color: $btn-color;
+        color: $white;
+        @include font(14px);
+        @extend %transition-repeat;
+
+        @include for-hover-only {
+          &:hover {
+            color: $btn-color;
+            background-color: $white;
+          }
+        }
+      }
+
+      .my-form {
+        padding: 50px 4.5%;
+        border-radius: 6px;
+        @include flex-basis(31.2%);
+        background-color: $white;
+      }
+
+      .form-heading {
+        padding: 0 0 23px 10px;
+        @include font(30px);
+        color: $form-heading;
+      }
+
+      .form-span {
+        padding-bottom: 42px;
+        display: block;
+        color: $form-content;
+        font-weight: 600
+      }
+
+      .input-group {
+        @include flex-basis(100%);
+        @extend %relative;
+
+        &::before {
+          @include contentBefore(\f0d7, $float: right);
+          @include position (absolute, $top: 14px, $right: 10px);
+          @include font($family: "FontAwesome");
+          color: #A7B4C2;
+          @include font(14px);
+        }
+      }
+
+      select {
+        width: 100%;
+        padding: 16px 4%;
+        border-color: #ececec;
+        margin-bottom: 15px;
+        background-color: $white;
+        color: $form-content;
+        @include font(16px, 600);
+        appearance: none;
+        outline: none;
+      }
+
+      .pay {
+        color: $form-content;
+        @include font(16px, 600);
+      }
+
+      .form-ctrl {
+        width: 100%;
+        padding-top: 35px;
+
+        input {
+          width: 100%;
+          padding: 15px 0;
+          border: 1px solid $btn-color;
+          border-radius: 6px;
+          background-color: $btn-color;
+          color: $white;
+          @include font(16px, 600);
+          outline: none;
+          @extend %transition-repeat;
+
+          @include for-hover-only {
+            &:hover {
+              color: $btn-color;
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* banner section end here*/
+/*offer section start here*/
+.offer {
+  padding: 150px 0;
+
+  @at-root {
+    .ofer-heading {
+      padding-bottom: 21px;
+      @extend %relative;
+      color: $sub-heading;
+      @include font(60px);
+      text-align: center;
+
+      &::before {
+        @include contentBefore(" ");
+        width: 45px;
+        height: 3px;
+        display: inline-block;
+        @include position (absolute, $top: -7px, $left: 47.3%);
+        background-color: $btn-color;
+      }
+    }
+
+    .offer-span {
+      padding-bottom: 92px;
+      display: block;
+      color: $form-content;
+      text-align: center;
+    }
+
+    .offer-list {
+      @extend %flex-repeat;
+      @include justify-content(space-between);
+    }
+
+    .offer-item {
+      padding: 143px 0 50px;
+      border-radius: 6px;
+      @include flex-basis(31.6%);
+      @include linear(to bottom, #0a8cff 0%, #054680 100%);
+    }
+
+    .item-heading {
+      @extend %relative;
+      color: $white;
+      text-align: center;
+
+      &::before {
+        @include contentBefore(\f015, $float: left);
+        @include position(absolute, $top: -58px, $left: 58%);
+        @include font(66px, $family: "FontAwesome");
+        @include transform(translate(-60px, -58%));
+      }
+    }
+
+    .offer-item:nth-child(2) .item-heading::before {
+      @include contentBefore(\f1b9);
+    }
+
+    .offer-item:nth-child(3) .item-heading::before {
+      @include contentBefore(\f19c);
+    }
+
+    .item-span {
+      padding-bottom: 30px;
+      border-bottom: 1px solid #38acb66b;
+      display: block;
+      color: $btn-color;
+      @include font(29px);
+      text-align: center;
+    }
+
+    .loan-list {
+      padding: 32px 0 46px;
+      margin-left: 19%;
+      @extend %flex-repeat;
+      @include flex-direction(column);
+      color: $white;
+      line-height: 30px;
+    }
+
+    .loan-item {
+      @extend %relative;
+      color: $white;
+
+      &::before {
+        @include contentBefore(" ");
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        @include position(absolute, $top: 11px, $left: -15px);
+        background-color: $btn-color;
+      }
+    }
+
+    .loan-ctrl {
+      text-align: center;
+    }
+
+    .loan-link {
+      padding: 14px 81px;
+      border: 1px solid $btn-color;
+      border-radius: 6px;
+      background-color: $btn-color;
+      color: $white;
+      font-size: 18px;
+      font-weight: 600;
+      @extend %transition-repeat;
+
+      @include for-hover-only {
+        &:hover {
+          color: $btn-color;
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+/*offer section start here*/

@@ -169,6 +169,12 @@
   -ms-transform: $property;
   transform: $property;
 }
+// mixin for linear gradient
+@mixin linear($property,$first,$second){
+  background:-webkit-gradient($property,$first,$second);
+  background:-o-linear-gradient($property,$first,$second);
+  background:linear-gradient($property,$first,$second);
+}
 
 // mixin for box-shaddow
 @mixin boxShadow($value) {
