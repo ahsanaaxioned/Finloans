@@ -117,11 +117,11 @@ li {
 }
 
 /*header css start here*/
-.loan-link, .about-btn, .form-ctrl input, .banner-link, .btn-apply, .btn-link, .nav-link, .bar {
+.faq-item::before, .loan-link, .about-btn, .form-ctrl input, .banner-link, .btn-apply, .btn-link, .nav-link, .bar {
   transition: all 0.3s ease-in-out;
 }
 
-.sub-heading::before, .work-list, .about-us .wrapper, .loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
+.FAQ .wrapper, .sub-heading::before, .work-list, .about-us .wrapper, .loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,7 +134,7 @@ li {
   align-items: center;
 }
 
-.sub-heading, .about-item, .loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
+.faq-item, .sub-heading, .about-item, .loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
   position: relative;
 }
 
@@ -602,5 +602,75 @@ select {
 }
 
 /*work section end here*/
+/*FAQ section start here*/
+.FAQ .wrapper {
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.FAQ .wrapper figure {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+.faq-content {
+  -ms-flex-preferred-size: 43.8%;
+  flex-basis: 43.8%;
+}
+
+.faq-content {
+  padding: 128px 0 99px;
+}
+
+.faq-heading {
+  margin-bottom: 50px;
+  color: #040E27;
+  font-size: 44px;
+}
+
+.faq-list {
+  margin-right: 21.5%;
+}
+
+.faq-item {
+  width: 100%;
+  border-bottom: 1px solid #d7dbe3;
+}
+.faq-item::before {
+  content: "\f078";
+  float: left;
+  color: #C6D9E7;
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 39%;
+  left: 3px;
+  cursor: pointer;
+}
+@media (min-width: 995px) {
+  .faq-item:hover::before {
+    color: #040E27;
+  }
+}
+
+.faq-item:nth-child(1)::before {
+  top: 18%;
+  transform: rotate(-180deg);
+}
+
+.faq-sub-heading {
+  padding: 26px 0 18px 8.4%;
+  color: #040E27;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.faq-description {
+  padding: 3px 30px 32px;
+  color: #727272;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+/*FAQ section end here*/
 
 /*# sourceMappingURL=style.css.map */

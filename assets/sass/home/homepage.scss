@@ -345,3 +345,64 @@
   }
 }
 /*work section end here*/
+/*FAQ section start here*/
+.FAQ{
+  .wrapper{
+    width: 100%;
+    @extend %flex-repeat;
+    @include justify-content(space-between);
+    figure{
+      @include flex-basis(50%);
+    }
+    @at-root{
+      .faq-content {
+        @include flex-basis(43.8%);
+    }
+    .faq-content{
+      padding: 128px 0 99px;
+    }
+    .faq-heading{
+      margin-bottom: 50px;
+      color: $FAQ;
+      @include font(44px);
+    }
+    .faq-list {
+      margin-right: 21.5%;
+  }
+    .faq-item{
+      width: 100%;
+      border-bottom: 1px solid #d7dbe3;
+      @extend %relative;
+      &::before{
+        @include contentBefore(\f078, $float: left);
+        color: #C6D9E7;
+        @include font($family:"FontAwesome");
+        @include position(absolute,$top:39%,$left:3px);
+        cursor: pointer;
+        @extend %transition-repeat;
+      }
+      @include for-hover-only{
+        &:hover::before{
+          color: $FAQ;
+        }
+      }
+    }
+    .faq-item:nth-child(1)::before{
+      @include position($top:18%);
+      transform: rotate(-180deg);
+    }
+    .faq-sub-heading{
+      padding: 26px 0 18px 8.4%;
+      color: $FAQ;
+      @include font(18px,500);
+    }
+    .faq-description{
+      padding: 3px 30px 32px;
+      color:#727272;
+      @include font(15px);
+      line-height: 28px;
+    }
+    }
+  }
+}
+/*FAQ section end here*/
