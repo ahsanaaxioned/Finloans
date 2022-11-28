@@ -117,11 +117,11 @@ li {
 }
 
 /*header css start here*/
-.loan-link, .form-ctrl input, .banner-link, .btn-apply, .btn-link, .nav-link, .bar {
+.loan-link, .about-btn, .form-ctrl input, .banner-link, .btn-apply, .btn-link, .nav-link, .bar {
   transition: all 0.3s ease-in-out;
 }
 
-.loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
+.about-us .wrapper, .loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,7 +134,7 @@ li {
   align-items: center;
 }
 
-.loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
+.about-item, .loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
   position: relative;
 }
 
@@ -473,7 +473,7 @@ select {
   text-align: center;
 }
 
-.loan-link {
+.loan-link, .about-btn {
   padding: 14px 81px;
   border: 1px solid #3EC7C9;
   border-radius: 6px;
@@ -483,12 +483,69 @@ select {
   font-weight: 600;
 }
 @media (min-width: 995px) {
-  .loan-link:hover {
+  .loan-link:hover, .about-btn:hover {
     color: #3EC7C9;
     background-color: #fff;
   }
 }
 
 /*offer section start here*/
+/*about-us section start here*/
+.about-us {
+  padding-bottom: 148px;
+}
+.about-us .wrapper {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.about-us .wrapper figure {
+  -ms-flex-preferred-size: 48.8%;
+  flex-basis: 48.8%;
+}
+.about-content {
+  margin-top: 88px;
+  -ms-flex-preferred-size: 42.7%;
+  flex-basis: 42.7%;
+}
+
+.about-heading {
+  padding-bottom: 40px;
+  color: #071B35;
+  font-size: 44px;
+}
+
+.descreption {
+  color: #9AA5AD;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.about-list {
+  padding: 16px 0 55px 5%;
+}
+
+.about-item {
+  color: #3C4472;
+  font-weight: 600;
+  line-height: 30px;
+}
+.about-item::before {
+  content: " ";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 11px;
+  left: -21px;
+  background-color: #4183F0;
+}
+
+.about-btn {
+  padding: 13px 25px;
+}
+
+/*about-us section end here*/
 
 /*# sourceMappingURL=style.css.map */

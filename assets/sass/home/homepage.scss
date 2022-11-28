@@ -236,4 +236,64 @@
     }
   }
 }
+
 /*offer section start here*/
+/*about-us section start here*/
+.about-us {
+  padding-bottom: 148px;
+
+  .wrapper {
+    @extend %flex-repeat;
+    @include justify-content(space-between);
+
+    figure {
+      @include flex-basis(48.8%);
+    }
+
+    @at-root {
+      .about-content {
+        margin-top: 88px;
+        @include flex-basis(42.7%);
+      }
+
+      .about-heading {
+        padding-bottom: 40px;
+        color: $sub-heading;
+        @include font(44px);
+      }
+
+      .descreption {
+        color: $form-content;
+        @include font(15px, 600);
+        line-height: 25px;
+      }
+
+      .about-list {
+        padding: 16px 0 55px 5%;
+      }
+
+      .about-item {
+        @extend %relative;
+        color: #3C4472;
+        @include font($weight: 600);
+        line-height: 30px;
+
+        &::before {
+          @include contentBefore(" ");
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          @include position(absolute, $top: 11px, $left: -21px);
+          background-color: #4183F0;
+        }
+      }
+
+      .about-btn {
+        padding: 13px 25px;
+        @extend .loan-link;
+      }
+    }
+  }
+}
+
+/*about-us section end here*/
