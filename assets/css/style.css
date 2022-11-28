@@ -121,20 +121,20 @@ li {
   transition: all 0.3s ease-in-out;
 }
 
-.about-us .wrapper, .loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
+.sub-heading::before, .work-list, .about-us .wrapper, .loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.banner .wrapper, .apply-btn, header .wrapper {
+.sub-heading::before, .banner .wrapper, .apply-btn, header .wrapper {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   align-items: center;
 }
 
-.about-item, .loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
+.sub-heading, .about-item, .loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
   position: relative;
 }
 
@@ -316,7 +316,7 @@ header .wrapper {
   content: "\f0d7";
   float: right;
   position: absolute;
-  top: 14px;
+  top: 18px;
   right: 10px;
   font-family: "FontAwesome";
   color: #A7B4C2;
@@ -547,5 +547,60 @@ select {
 }
 
 /*about-us section end here*/
+/*work section start here*/
+.work {
+  padding: 162px 0 185px;
+  background-color: #F5FBFF;
+}
+.work .ofer-heading {
+  font-size: 44px;
+}
+.work-list {
+  margin-top: 74px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.work-item {
+  -ms-flex-preferred-size: 28%;
+  flex-basis: 28%;
+}
+
+.sub-heading {
+  margin: 20px 0 15px;
+  color: #040E27;
+  font-size: 24px;
+}
+.sub-heading::before {
+  content: "01";
+  width: 67px;
+  height: 67px;
+  border: 1px solid #D0E2F0;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: -90px;
+  left: 2px;
+  background-color: #D0E2F0;
+  color: #299CF0;
+}
+
+.loan-description {
+  color: #7A838B;
+  line-height: 28px;
+}
+
+.work-item:nth-child(2) .sub-heading::before {
+  content: "02";
+}
+
+.work-item:nth-child(3) .sub-heading::before {
+  content: "03";
+}
+
+/*work section end here*/
 
 /*# sourceMappingURL=style.css.map */

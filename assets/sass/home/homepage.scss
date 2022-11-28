@@ -67,7 +67,7 @@
 
         &::before {
           @include contentBefore(\f0d7, $float: right);
-          @include position (absolute, $top: 14px, $right: 10px);
+          @include position (absolute, $top: 18px, $right: 10px);
           @include font($family: "FontAwesome");
           color: #A7B4C2;
           @include font(14px);
@@ -297,3 +297,51 @@
 }
 
 /*about-us section end here*/
+/*work section start here*/
+.work{
+  padding: 162px 0 185px;
+  background-color: #F5FBFF;
+  .ofer-heading{
+    @include font(44px);
+  }
+  @at-root{
+    .work-list {
+      margin-top: 74px;
+      @extend %flex-repeat;
+      @include justify-content(space-between);
+  }
+  .work-item {
+    @include flex-basis(28%);
+}
+.sub-heading{
+  margin: 20px 0 15px;
+  @extend %relative;
+  color: $work;
+  @include font(24px);
+  &::before{
+    @include contentBefore("01");
+    width: 67px;
+    height: 67px;
+    border: 1px solid #D0E2F0;
+    border-radius: 50%;
+    @extend %flex-repeat;
+    @extend %align-repeat;
+    @include justify-content(center);
+    @include position(absolute,$top:-90px,$left:2px);
+    background-color: #D0E2F0;
+    color:#299CF0;
+  }
+}
+.loan-description{
+  color: #7A838B;
+  line-height: 28px;
+}
+.work-item:nth-child(2) .sub-heading::before{
+  @include contentBefore("02");
+}
+.work-item:nth-child(3) .sub-heading::before{
+  @include contentBefore("03");
+}
+  }
+}
+/*work section end here*/
