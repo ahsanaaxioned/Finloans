@@ -298,111 +298,194 @@
 
 /*about-us section end here*/
 /*work section start here*/
-.work{
+.work {
   padding: 162px 0 185px;
   background-color: #F5FBFF;
-  .ofer-heading{
+
+  .ofer-heading {
     @include font(44px);
   }
-  @at-root{
+
+  @at-root {
     .work-list {
       margin-top: 74px;
       @extend %flex-repeat;
       @include justify-content(space-between);
+    }
+
+    .work-item {
+      @include flex-basis(28%);
+    }
+
+    .sub-heading {
+      margin: 20px 0 15px;
+      @extend %relative;
+      color: $work;
+      @include font(24px);
+
+      &::before {
+        @include contentBefore("01");
+        width: 67px;
+        height: 67px;
+        border: 1px solid #D0E2F0;
+        border-radius: 50%;
+        @extend %flex-repeat;
+        @extend %align-repeat;
+        @include justify-content(center);
+        @include position(absolute, $top: -90px, $left: 2px);
+        background-color: #D0E2F0;
+        color: #299CF0;
+      }
+    }
+
+    .loan-description {
+      color: #7A838B;
+      line-height: 28px;
+    }
+
+    .work-item:nth-child(2) .sub-heading::before {
+      @include contentBefore("02");
+    }
+
+    .work-item:nth-child(3) .sub-heading::before {
+      @include contentBefore("03");
+    }
   }
-  .work-item {
-    @include flex-basis(28%);
 }
-.sub-heading{
-  margin: 20px 0 15px;
-  @extend %relative;
-  color: $work;
-  @include font(24px);
-  &::before{
-    @include contentBefore("01");
-    width: 67px;
-    height: 67px;
-    border: 1px solid #D0E2F0;
-    border-radius: 50%;
-    @extend %flex-repeat;
-    @extend %align-repeat;
-    @include justify-content(center);
-    @include position(absolute,$top:-90px,$left:2px);
-    background-color: #D0E2F0;
-    color:#299CF0;
-  }
-}
-.loan-description{
-  color: #7A838B;
-  line-height: 28px;
-}
-.work-item:nth-child(2) .sub-heading::before{
-  @include contentBefore("02");
-}
-.work-item:nth-child(3) .sub-heading::before{
-  @include contentBefore("03");
-}
-  }
-}
+
 /*work section end here*/
 /*FAQ section start here*/
-.FAQ{
-  .wrapper{
+.FAQ {
+  .wrapper {
     width: 100%;
     @extend %flex-repeat;
     @include justify-content(space-between);
-    figure{
+
+    figure {
       @include flex-basis(50%);
     }
-    @at-root{
+
+    @at-root {
       .faq-content {
         @include flex-basis(43.8%);
-    }
-    .faq-content{
-      padding: 128px 0 99px;
-    }
-    .faq-heading{
-      margin-bottom: 50px;
-      color: $FAQ;
-      @include font(44px);
-    }
-    .faq-list {
-      margin-right: 21.5%;
-  }
-    .faq-item{
-      width: 100%;
-      border-bottom: 1px solid #d7dbe3;
-      @extend %relative;
-      &::before{
-        @include contentBefore(\f078, $float: left);
-        color: #C6D9E7;
-        @include font($family:"FontAwesome");
-        @include position(absolute,$top:39%,$left:3px);
-        cursor: pointer;
-        @extend %transition-repeat;
       }
-      @include for-hover-only{
-        &:hover::before{
-          color: $FAQ;
+
+      .faq-content {
+        padding: 128px 0 99px;
+      }
+
+      .faq-heading {
+        margin-bottom: 50px;
+        color: $FAQ;
+        @include font(44px);
+      }
+
+      .faq-list {
+        margin-right: 21.5%;
+      }
+
+      .faq-item {
+        width: 100%;
+        border-bottom: 1px solid #d7dbe3;
+        @extend %relative;
+        cursor: pointer;
+
+        &::before {
+          @include contentBefore(\f078, $float: left);
+          color: #C6D9E7;
+          @include font($family: "FontAwesome");
+          @include position(absolute, $top: 39%, $left: 3px);
+          @extend %transition-repeat;
+        }
+
+        @include for-hover-only {
+          &:hover::before {
+            color: $FAQ;
+          }
         }
       }
-    }
-    .faq-item:nth-child(1)::before{
-      @include position($top:18%);
-      transform: rotate(-180deg);
-    }
-    .faq-sub-heading{
-      padding: 26px 0 18px 8.4%;
-      color: $FAQ;
-      @include font(18px,500);
-    }
-    .faq-description{
-      padding: 3px 30px 32px;
-      color:#727272;
-      @include font(15px);
-      line-height: 28px;
-    }
+
+      .faq-item:nth-child(1)::before {
+        @include position($top: 18%);
+        transform: rotate(-180deg);
+      }
+
+      .faq-sub-heading {
+        padding: 26px 0 18px 8.4%;
+        color: $FAQ;
+        @include font(18px, 500);
+      }
+
+      .faq-description {
+        padding: 3px 30px 32px;
+        color: #727272;
+        @include font(15px);
+        line-height: 28px;
+      }
     }
   }
 }
+
 /*FAQ section end here*/
+/*testimonial section start here*/
+.testimonial {
+  padding: 149px 0;
+
+  @at-root {
+    .content-wrap {
+      @extend %flex-repeat;
+      @include justify-content(space-between);
+      @extend %align-repeat;
+
+      figure {
+        @include flex-basis(20.6%);
+        @extend %relative;
+
+        .qoute {
+          text-indent: -9999px;
+
+          &::before {
+            @include contentBefore(\f10d, $float: left);
+            width: 57px;
+            height: 57px;
+            border-radius: 50%;
+            @extend %flex-repeat;
+            @extend %align-repeat;
+            @include justify-content(center);
+            @include position(absolute,$left:75%,$bottom:20px);
+            background-color: $btn-color;
+            color: $white;
+            @include font(20px, $family: "FontAwesome");
+            text-indent: 0;
+          }
+        }
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .feedback-description {
+        margin-bottom: 18px;
+        color: $FAQ;
+        @include font(18px, 500);
+        line-height: 32px;
+      }
+
+      .name {
+        display: block;
+        color: #7A838B;
+      }
+    }
+
+    .feedback {
+      @include flex-basis(59.2%);
+    }
+
+    .control {
+      @include flex-basis(9%);
+    }
+  }
+}
+
+/*testimonial section end here*/

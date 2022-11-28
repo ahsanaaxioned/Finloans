@@ -121,20 +121,20 @@ li {
   transition: all 0.3s ease-in-out;
 }
 
-.FAQ .wrapper, .sub-heading::before, .work-list, .about-us .wrapper, .loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
+.content-wrap figure .qoute::before, .content-wrap, .FAQ .wrapper, .sub-heading::before, .work-list, .about-us .wrapper, .loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.sub-heading::before, .banner .wrapper, .apply-btn, header .wrapper {
+.content-wrap figure .qoute::before, .content-wrap, .sub-heading::before, .banner .wrapper, .apply-btn, header .wrapper {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   align-items: center;
 }
 
-.faq-item, .sub-heading, .about-item, .loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
+.content-wrap figure, .faq-item, .sub-heading, .about-item, .loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
   position: relative;
 }
 
@@ -635,6 +635,7 @@ select {
 .faq-item {
   width: 100%;
   border-bottom: 1px solid #d7dbe3;
+  cursor: pointer;
 }
 .faq-item::before {
   content: "\f078";
@@ -644,7 +645,6 @@ select {
   position: absolute;
   top: 39%;
   left: 3px;
-  cursor: pointer;
 }
 @media (min-width: 995px) {
   .faq-item:hover::before {
@@ -672,5 +672,65 @@ select {
 }
 
 /*FAQ section end here*/
+/*testimonial section start here*/
+.testimonial {
+  padding: 149px 0;
+}
+.content-wrap {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.content-wrap figure {
+  -ms-flex-preferred-size: 20.6%;
+  flex-basis: 20.6%;
+}
+.content-wrap figure .qoute {
+  text-indent: -9999px;
+}
+.content-wrap figure .qoute::before {
+  content: "\f10d";
+  float: left;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 75%;
+  background-color: #3EC7C9;
+  color: #fff;
+  font-size: 20px;
+  font-family: "FontAwesome";
+  text-indent: 0;
+}
+.content-wrap figure img {
+  border-radius: 50%;
+}
+.content-wrap .feedback-description {
+  margin-bottom: 18px;
+  color: #040E27;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.content-wrap .name {
+  display: block;
+  color: #7A838B;
+}
+
+.feedback {
+  -ms-flex-preferred-size: 59.2%;
+  flex-basis: 59.2%;
+}
+
+.control {
+  -ms-flex-preferred-size: 9%;
+  flex-basis: 9%;
+}
+
+/*testimonial section end here*/
 
 /*# sourceMappingURL=style.css.map */
