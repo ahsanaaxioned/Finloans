@@ -250,8 +250,9 @@ header .wrapper {
   position: relative;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.2) url("https://extension.harvard.edu/wp-content/uploads/sites/8/2020/10/finance-1536x918.jpg") center no-repeat;
+  background: rgba(4, 14, 39, 0.6) url(https://extension.harvard.edu/wp-content/uploads/sites/8/2020/10/finance-1536x918.jpg) center no-repeat;
   background-size: cover;
+  background-blend-mode: overlay;
 }
 .banner .wrapper {
   -webkit-box-pack: justify;
