@@ -1,0 +1,116 @@
+/*header css start here*/
+%transition-repeat {
+  @include transition(all .3s ease-in-out);
+}
+
+%flex-repeat {
+  @include displayFlex();
+}
+
+%align-repeat {
+  @include align-items(center);
+}
+
+%relative {
+  @include position(relative);
+}
+
+header {
+  padding: 22px 0;
+
+  .wrapper {
+    width: 100%;
+    @extend %flex-repeat;
+    @extend %align-repeat;
+    @include justify-content(space-between);
+
+    @at-root {
+      .hamburger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .bar {
+        width: 18px;
+        height: 2px;
+        margin: 5px;
+        display: block;
+        background-color: $white;
+        text-indent: -9999px;
+        @extend %transition-repeat;
+      }
+
+      .logo {
+        padding-left: 2.7%;
+        @include flex-basis(27.6%);
+      }
+
+      .navbar {
+        @include flex-basis(44.5%);
+      }
+
+      .nav-list {
+        @extend %flex-repeat;
+        gap: 22px;
+      }
+
+      .nav-link {
+        padding: 5px 5px;
+        color: #000;
+        @include font(14px);
+        @extend %transition-repeat;
+        @include for-hover-only {
+          &:hover {
+            color: $btn-color;
+          }
+        }
+      }
+
+      .nav-icon {
+        @extend %relative;
+
+        &::before {
+          @include contentBefore(\f078, $float: right);
+          @include font(10px, $family: "FontAwesome");
+          @include position (absolute, $top: 7px, $right: -8px);
+        }
+      }
+
+      .apply-btn {
+        @extend %flex-repeat;
+        @extend %align-repeat;
+        @include flex-basis(20.2%);
+      }
+
+      .btn-link {
+        font-size: 13px;
+        @extend %relative;
+
+        &::before {
+          @include contentBefore(\f095, $float: left);
+          @include position (absolute, $top: 2px, $left: -20px);
+          color: $btn-color;
+          @include font(12px, $family: "FontAwesome");
+        }
+      }
+
+      .btn-apply {
+        padding: 14px 9px;
+        border: 1px solid $btn-color;
+        border-radius: 6px;
+        margin-left: 10px;
+        @include font(13px);
+        color: $btn-color;
+        @extend %transition-repeat;
+        @include for-hover-only{
+          &:hover{
+            color: $white;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+/*header css end here*/
