@@ -129,7 +129,7 @@
 
 // mixin for box sizing
 @mixin boxSizing($property){
-  -webkit-box-sizing:border-box;
+  -webkit-box-sizing:$property;
   box-sizing: $property;
 }
 
@@ -189,9 +189,16 @@
 @mixin for-large-screen{
   @media (max-width:1200px){ @content; } 
 }
+@mixin for-lp-screen{
+  @media (max-width:1024px){ @content; } 
+}
 // mixin for medium screen
 @mixin for-medium-screen{
   @media (max-width:995px){ @content; } 
+}
+// mixin for mobile screen
+@mixin for-mobile-screen{
+  @media (max-width:768px){ @content; } 
 }
 // mixin for small screen
 @mixin for-small-screen{
