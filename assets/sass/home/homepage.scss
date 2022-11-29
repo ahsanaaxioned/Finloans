@@ -5,6 +5,7 @@
   background: rgba(4, 14, 39, 0.6) url(https://extension.harvard.edu/wp-content/uploads/sites/8/2020/10/finance-1536x918.jpg) center no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
+
   .wrapper {
     @extend %flex-repeat;
     @extend %align-repeat;
@@ -78,11 +79,13 @@
         width: 100%;
         padding: 16px 4%;
         border-color: #ececec;
+        border-radius: 6px;
         margin-bottom: 15px;
         background-color: $white;
         color: $form-content;
         @include font(16px, 600);
         appearance: none;
+        cursor: pointer;
         outline: none;
       }
 
@@ -429,10 +432,11 @@
 /*FAQ section end here*/
 /*testimonial section start here*/
 .testimonial {
-  padding: 149px 0;
+  padding: 149px 0 170px;
 
   @at-root {
     .content-wrap {
+      margin-bottom: 164px;
       @extend %flex-repeat;
       @include justify-content(space-between);
       @extend %align-repeat;
@@ -452,7 +456,7 @@
             @extend %flex-repeat;
             @extend %align-repeat;
             @include justify-content(center);
-            @include position(absolute,$left:75%,$bottom:20px);
+            @include position(absolute, $left: 75%, $bottom: 20px);
             background-color: $btn-color;
             color: $white;
             @include font(20px, $family: "FontAwesome");
@@ -468,7 +472,7 @@
       .feedback-description {
         margin-bottom: 18px;
         color: $FAQ;
-        @include font(18px, 500);
+        @include font(17px, 500);
         line-height: 32px;
       }
 
@@ -485,7 +489,98 @@
     .control {
       @include flex-basis(9%);
     }
+
+    .left {
+      @extend %relative;
+      text-indent: -9999px;
+      @extend %transition-repeat;
+
+      @include for-hover-only {
+        &:hover::before {
+          border-color: $form-heading;
+          background-color: $white;
+          color: $form-heading;
+        }
+      }
+
+      &::before {
+        @include contentBefore(\f104, $float: left);
+        width: 46px;
+        height: 46px;
+        border: 1px solid #D9E6F0;
+        border-radius: 50%;
+        @extend %flex-repeat;
+        @extend %align-repeat;
+        @include justify-content(center);
+        @include position(absolute, $top: 21px, $left: 48px);
+        background-color: #D9E6F0;
+        color: $btn-color;
+        @include font($family: "FontAwesome");
+        text-indent: 0;
+
+      }
+    }
+
+    .right {
+      @extend .left;
+
+      &::before {
+        @include position($top: -36px, $left: 45px);
+        @include transform(rotate(-180deg));
+      }
+    }
+
+    .slide-image-list {
+      @extend %flex-repeat;
+      @include justify-content(space-between);
+    }
   }
 }
 
 /*testimonial section end here*/
+/*loan section start here*/
+.loan {
+  padding: 136px 0;
+  background: rgba(4, 14, 39, 0.6) url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmluYW5jZXxlbnwwfHwwfHw%3D&w=1000&q=80") no-repeat center;
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  .wrapper {
+    @extend %flex-repeat;
+    @extend %align-repeat;
+    @include justify-content(space-between);
+
+    .loan-description {
+      @include flex-basis(59%);
+      color: $white;
+      @include font(45px);
+      line-height: 57px;
+    }
+
+    .apply-btn {
+      @include flex-basis(12.5%);
+    }
+
+    @at-root {
+      .apply-link {
+        padding: 13px 24px;
+        border: 1px solid $btn-color;
+        border-radius: 4px;
+        background: $btn-color;
+        color: $white;
+        @extend %transition-repeat;
+        @include font(18px, 500);
+
+        @include for-hover-only {
+          &:hover {
+            color: $btn-color;
+            background-color: $white;
+            border-color: $btn-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*loan section end here*/

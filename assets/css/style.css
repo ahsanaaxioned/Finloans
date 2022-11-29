@@ -117,24 +117,24 @@ li {
 }
 
 /*header css start here*/
-.faq-item::before, .loan-link, .about-btn, .form-ctrl input, .banner-link, .btn-apply, .btn-link, .nav-link, .bar {
+.apply-link, .left, .right, .faq-item::before, .loan-link, .about-btn, .form-ctrl input, .banner-link, .btn-apply, .btn-link, .nav-link, .bar {
   transition: all 0.3s ease-in-out;
 }
 
-.content-wrap figure .qoute::before, .content-wrap, .FAQ .wrapper, .sub-heading::before, .work-list, .about-us .wrapper, .loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
+.loan .wrapper, .slide-image-list, .left::before, .right::before, .content-wrap figure .qoute::before, .content-wrap, .FAQ .wrapper, .sub-heading::before, .work-list, .about-us .wrapper, .loan-list, .offer-list, .banner .wrapper, .apply-btn, .nav-list, header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.content-wrap figure .qoute::before, .content-wrap, .sub-heading::before, .banner .wrapper, .apply-btn, header .wrapper {
+.loan .wrapper, .left::before, .right::before, .content-wrap figure .qoute::before, .content-wrap, .sub-heading::before, .banner .wrapper, .apply-btn, header .wrapper {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   align-items: center;
 }
 
-.content-wrap figure, .faq-item, .sub-heading, .about-item, .loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
+.left, .right, .content-wrap figure, .faq-item, .sub-heading, .about-item, .loan-item, .item-heading, .ofer-heading, .input-group, .btn-link, .nav-icon {
   position: relative;
 }
 
@@ -328,12 +328,14 @@ select {
   width: 100%;
   padding: 16px 4%;
   border-color: #ececec;
+  border-radius: 6px;
   margin-bottom: 15px;
   background-color: #fff;
   color: #9AA5AD;
   font-size: 16px;
   font-weight: 600;
   appearance: none;
+  cursor: pointer;
   outline: none;
 }
 
@@ -675,9 +677,10 @@ select {
 /*FAQ section end here*/
 /*testimonial section start here*/
 .testimonial {
-  padding: 149px 0;
+  padding: 149px 0 170px;
 }
 .content-wrap {
+  margin-bottom: 164px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -713,7 +716,7 @@ select {
 .content-wrap .feedback-description {
   margin-bottom: 18px;
   color: #040E27;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 32px;
 }
@@ -732,6 +735,90 @@ select {
   flex-basis: 9%;
 }
 
+.left, .right {
+  text-indent: -9999px;
+}
+@media (min-width: 995px) {
+  .left:hover::before, .right:hover::before {
+    border-color: #040D25;
+    background-color: #fff;
+    color: #040D25;
+  }
+}
+.left::before, .right::before {
+  content: "\f104";
+  float: left;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #D9E6F0;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 21px;
+  left: 48px;
+  background-color: #D9E6F0;
+  color: #3EC7C9;
+  font-family: "FontAwesome";
+  text-indent: 0;
+}
+
+.right::before {
+  top: -36px;
+  left: 45px;
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.slide-image-list {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 /*testimonial section end here*/
+/*loan section start here*/
+.loan {
+  padding: 136px 0;
+  background: rgba(4, 14, 39, 0.6) url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmluYW5jZXxlbnwwfHwwfHw%3D&w=1000&q=80") no-repeat center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.loan .wrapper {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.loan .wrapper .loan-description {
+  -ms-flex-preferred-size: 59%;
+  flex-basis: 59%;
+  color: #fff;
+  font-size: 45px;
+  line-height: 57px;
+}
+.loan .wrapper .apply-btn {
+  -ms-flex-preferred-size: 12.5%;
+  flex-basis: 12.5%;
+}
+.apply-link {
+  padding: 13px 24px;
+  border: 1px solid #3EC7C9;
+  border-radius: 4px;
+  background: #3EC7C9;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (min-width: 995px) {
+  .apply-link:hover {
+    color: #3EC7C9;
+    background-color: #fff;
+    border-color: #3EC7C9;
+  }
+}
+
+/*loan section end here*/
 
 /*# sourceMappingURL=style.css.map */
