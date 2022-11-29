@@ -5,6 +5,7 @@
   background: rgba(4, 14, 39, 0.6) url(https://extension.harvard.edu/wp-content/uploads/sites/8/2020/10/finance-1536x918.jpg) center no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
+
   .wrapper {
     @extend %flex-repeat;
     @extend %align-repeat;
@@ -78,11 +79,13 @@
         width: 100%;
         padding: 16px 4%;
         border-color: #ececec;
+        border-radius: 6px;
         margin-bottom: 15px;
         background-color: $white;
         color: $form-content;
         @include font(16px, 600);
         appearance: none;
+        cursor: pointer;
         outline: none;
       }
 
@@ -112,6 +115,56 @@
               background-color: $white;
             }
           }
+        }
+      }
+
+      @include for-large-screen {
+        .banner-content {
+          @include flex-basis(44%)
+        }
+
+        .banner-heading {
+          @include font(47px);
+        }
+
+        .my-form {
+          @include flex-basis(34.2%)
+        }
+
+        .form-heading {
+          @include font(25px);
+        }
+      }
+
+      @include for-lp-screen {
+        .banner-heading {
+          @include font(40px);
+        }
+
+        .my-form {
+          @include flex-basis(37.2%)
+        }
+
+        .form-span {
+          @include font(14px);
+        }
+
+        .about-item {
+          @include font(14px);
+        }
+      }
+
+      @include for-medium-screen {
+        .banner {
+          padding: 205px 0 150px 0;
+        }
+
+        .my-form {
+          @include flex-basis(48.2%)
+        }
+
+        .banner-heading {
+          @include font(30px);
         }
       }
     }
@@ -233,6 +286,44 @@
           background-color: $white;
         }
       }
+
+    }
+
+    @include for-lp-screen {
+      .loan-list {
+        margin-left: 13%;
+      }
+    }
+
+    @include for-medium-screen {
+      .offer {
+        padding: 90px 0;
+
+        figure img {
+          height: 100%;
+        }
+      }
+
+      .offer-list {
+        @include flex-wrap(wrap);
+      }
+
+      .offer-item {
+        margin: 15px 0;
+        @include flex-basis(46.6%);
+      }
+
+      .about-content {
+        padding: 0;
+      }
+
+      .about-heading {
+        @include font(36px);
+      }
+
+      .about-list {
+        padding: 16px 0 36px 5%;
+      }
     }
   }
 }
@@ -292,6 +383,25 @@
         padding: 13px 25px;
         @extend .loan-link;
       }
+      @include for-medium-screen {
+        .about-us {
+          padding: 0;
+          figure img {
+            height: 100%;
+          }
+        }
+        .about-content {
+          margin: 0;
+        }
+  
+        .about-heading {
+          @include font(36px);
+        }
+  
+        .about-list {
+          padding: 16px 0 36px 5%;
+        }
+      }
     }
   }
 }
@@ -349,6 +459,20 @@
 
     .work-item:nth-child(3) .sub-heading::before {
       @include contentBefore("03");
+    }
+    @include for-medium-screen{
+      .work{
+        padding: 120px 0;
+      }
+      .work-list{
+        @include flex-wrap(wrap);
+      }
+      .work-item{
+        @include flex-basis(46%);
+      }
+      .work-item:nth-child(3){
+        margin-top: 100px;
+      }
     }
   }
 }
@@ -422,6 +546,34 @@
         @include font(15px);
         line-height: 28px;
       }
+
+      @include for-large-screen {
+        .faq-content {
+          padding: 0;
+        }
+      }
+      @include for-medium-screen{
+        .FAQ{
+          .wrapper{
+            width: 81.5%;
+            @include flex-direction(column);
+            @include align-items(center);
+          }
+          figure{
+            width: 85%;
+          }
+        }
+        .faq-content{
+          margin-top: 30px;
+        }
+        .faq-heading{
+          margin: 25px 0 10px;
+          text-align: center;
+        }
+        .faq-list{
+          margin: 0;
+        }
+      }
     }
   }
 }
@@ -429,10 +581,11 @@
 /*FAQ section end here*/
 /*testimonial section start here*/
 .testimonial {
-  padding: 149px 0;
+  padding: 149px 0 170px;
 
   @at-root {
     .content-wrap {
+      margin-bottom: 164px;
       @extend %flex-repeat;
       @include justify-content(space-between);
       @extend %align-repeat;
@@ -452,7 +605,7 @@
             @extend %flex-repeat;
             @extend %align-repeat;
             @include justify-content(center);
-            @include position(absolute,$left:75%,$bottom:20px);
+            @include position(absolute, $left: 75%, $bottom: 20px);
             background-color: $btn-color;
             color: $white;
             @include font(20px, $family: "FontAwesome");
@@ -468,7 +621,7 @@
       .feedback-description {
         margin-bottom: 18px;
         color: $FAQ;
-        @include font(18px, 500);
+        @include font(17px, 500);
         line-height: 32px;
       }
 
@@ -485,7 +638,377 @@
     .control {
       @include flex-basis(9%);
     }
+
+    .left {
+      @extend %relative;
+      text-indent: -9999px;
+      @extend %transition-repeat;
+
+      @include for-hover-only {
+        &:hover::before {
+          border-color: $form-heading;
+          background-color: $white;
+          color: $form-heading;
+        }
+      }
+
+      &::before {
+        @include contentBefore(\f104, $float: left);
+        width: 46px;
+        height: 46px;
+        border: 1px solid #D9E6F0;
+        border-radius: 50%;
+        @extend %flex-repeat;
+        @extend %align-repeat;
+        @include justify-content(center);
+        @include position(absolute, $top: 21px, $left: 48px);
+        background-color: #D9E6F0;
+        color: $btn-color;
+        @include font($family: "FontAwesome");
+        text-indent: 0;
+
+      }
+    }
+
+    .right {
+      @extend .left;
+
+      &::before {
+        @include position($top: -36px, $left: 45px);
+        @include transform(rotate(-180deg));
+      }
+    }
+
+    .slide-image-list {
+      @extend %flex-repeat;
+      @include justify-content(space-between);
+    }
+
+    @include for-large-screen {
+      .slide-image-list {
+        li {
+          @include flex-basis(19%);
+        }
+      }
+    }
+    @include for-medium-screen{
+      .testimonial{
+        padding: 91px 0 100px;
+      }
+      .content-wrap{
+        figure{
+          padding-bottom: 40px;
+          @include flex-basis(24.7%);
+          .qoute::before{
+            width: 48px;
+            height: 48px;
+            @include position($bottom:72px,$left:71%);
+          }
+        }
+      }
+      .feedback{
+        @include flex-basis(57.7%);
+      }
+      .left::before{
+        @include position($top: 200px, $left: -326px);
+      }
+      .right::before{
+        @include position($top: 200px, $left: -217px);
+      }
+      .slide-image-list{
+        padding-top: 25px;
+      }
+    }
   }
 }
 
 /*testimonial section end here*/
+/*loan section start here*/
+.loan {
+  padding: 136px 0;
+  background: rgba(4, 14, 39, 0.6) url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmluYW5jZXxlbnwwfHwwfHw%3D&w=1000&q=80") no-repeat center;
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  .wrapper {
+    @extend %flex-repeat;
+    @extend %align-repeat;
+    @include justify-content(space-between);
+
+    .loan-description {
+      @include flex-basis(59%);
+      color: $white;
+      @include font(45px);
+      line-height: 57px;
+    }
+
+    .apply-btn {
+      @include flex-basis(unset);
+    }
+
+    @at-root {
+      .apply-link {
+        padding: 14px 29px;
+        border: 1px solid $btn-color;
+        border-radius: 4px;
+        background: $btn-color;
+        color: $white;
+        @extend %transition-repeat;
+        @include font($weight: 600);
+
+        @include for-hover-only {
+          &:hover {
+            color: $btn-color;
+            background-color: $white;
+            border-color: $btn-color;
+          }
+        }
+      }
+    }
+    @include for-medium-screen{
+      @at-root{
+        .loan{
+          padding: 100px 0;
+        }
+      }
+        .loan-description{
+          @include flex-basis(60%);
+          @include font(35px);
+        }
+    }
+  }
+}
+
+/*loan section end here*/
+/*footer start here*/
+footer {
+  padding: 143px 0 0;
+
+  @at-root {
+    .footer-list {
+      padding-bottom: 130px;
+      @extend %flex-repeat;
+    }
+
+    .footer-item:nth-child(1) {
+      @include flex-basis(19.2%);
+    }
+
+    .footer-item:nth-child(2) {
+      @include flex-basis(12.4%);
+      margin-left: 16%;
+    }
+
+    .footer-item:nth-child(3) {
+      @include flex-basis(14%);
+      margin-left: 5.2%;
+    }
+
+    .footer-item:nth-child(4) {
+      @include flex-basis(33%);
+      margin-left: 3.6%;
+    }
+
+    .footer-logo {
+      padding-bottom: 40px;
+    }
+
+    .contact {
+      @extend %flex-repeat;
+      @include flex-direction(column);
+    }
+
+    .contact-item {
+      color: $form-content;
+      @include font(14px, 500);
+    }
+
+    .contact-link {
+      @extend .contact-item;
+      @extend %transition-repeat;
+      line-height: 25px;
+
+      @include for-hover-only {
+        &:hover {
+          color: $form-heading;
+        }
+      }
+    }
+
+    address {
+      line-height: 25px;
+    }
+
+    .social-list {
+      padding-top: 48px;
+    }
+
+    .social-item {
+      margin-left: 23.4%
+    }
+
+    .icon {
+      @extend %relative;
+      text-indent: -9999px;
+      cursor: pointer;
+      @extend %transition-repeat;
+
+      @include for-hover-only {
+        &:hover::before {
+          border-color: $btn-color;
+          color: $btn-color;
+        }
+      }
+
+      &::before {
+        @include contentBefore(\f39e, $float: left);
+        width: 37px;
+        height: 37px;
+        border: 1px solid #dadada;
+        @extend %flex-repeat;
+        @extend %align-repeat;
+        @include justify-content(center);
+        @include position(absolute, $top: 0, $left: -45px);
+        @include font($family: "FontAwesome");
+        color: #dadada;
+        @include font(16px);
+        border-radius: 50%;
+        text-indent: 0;
+      }
+    }
+
+    .google::before {
+      @include contentBefore(\f0d5);
+    }
+
+    .twitter::before {
+      @include contentBefore(\f099);
+    }
+
+    .instagram::before {
+      @include contentBefore(\f16d);
+    }
+
+    .footer-heading {
+      padding-bottom: 40px;
+      color: $work;
+      @include font(17px, 500);
+    }
+
+    .web-list {
+      @extend %flex-repeat;
+      @include flex-direction(column);
+    }
+
+    .web-link {
+      color: $form-content;
+      @include font(13px);
+      line-height: 35px;
+      @extend %transition-repeat;
+
+      @include for-hover-only {
+        &:hover {
+          color: $form-heading;
+        }
+      }
+    }
+
+    .sub-description {
+      color: $form-content;
+      @include font(13px);
+      line-height: 35px;
+    }
+
+    .input-sub {
+      margin-bottom: 14px;
+      @extend %flex-repeat;
+      border: 2px solid #eee;
+      border-radius: 4px;
+    }
+
+    .input-content {
+      width: 100%;
+
+      input {
+        width: 100%;
+        padding: 15px 0 15px 8%;
+        border: none;
+        outline: none;
+        padding-left: 8%;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    .submit {
+      padding: 13px 21px;
+      margin: 2px;
+      border: 1px solid #4183F0;
+      border-radius: 6px;
+      background-color: #4183F0;
+      color: $white;
+      @extend %transition-repeat;
+
+      @include for-hover-only {
+        &:hover {
+          color: $btn-color;
+          background-color: $white;
+          border-color: $btn-color;
+        }
+      }
+
+    }
+
+    .copy {
+      padding-bottom: 8px;
+      color: $form-content;
+      text-align: center;
+    }
+
+    .copy-link {
+      color: #569FFF;
+      @extend %transition-repeat;
+
+      @include for-hover-only {
+        &:hover {
+          color: $FAQ;
+        }
+      }
+    }
+
+    @include for-large-screen {
+      .footer-item:nth-child(1) {
+        @include flex-basis(25%);
+      }
+
+      .footer-item:nth-child(2) {
+        margin-left: 6%;
+      }
+    }
+    @include for-medium-screen{
+      footer{
+        padding-top: 80px;
+      }
+      .footer-list{
+        padding-bottom: 50px;
+        @include flex-wrap(wrap);
+        .footer-item{
+          margin: 25px 9px;
+          @include flex-basis(47%);
+        }
+      }
+      .social-item{
+        margin-left: 19.4%;
+      }
+      .social-item:nth-child(1){
+        margin: 0;
+      }
+      .icon::before{
+        @include position($left:-3px);
+      }
+    }
+  }
+}
+
+
+/* footer end here*/
