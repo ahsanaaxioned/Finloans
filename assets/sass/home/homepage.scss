@@ -167,6 +167,23 @@
           @include font(30px);
         }
       }
+      @include for-mobile-screen{
+        .banner {
+          padding: 160px 0 150px 0;
+          .wrapper{
+            @include flex-direction(column);
+          }
+          @at-root{
+            .banner-content{
+              margin-bottom: 40px;
+              text-align: center;
+            }
+            .my-form{
+              padding: 50px 10.5%;
+            }
+          }
+      }
+      }
     }
   }
 }
@@ -325,6 +342,21 @@
         padding: 16px 0 36px 5%;
       }
     }
+    @include for-mobile-screen{
+      .ofer-heading{
+        @include font(40px);
+      }
+      .offer-span {
+        padding-bottom: 40px;
+      }
+      .offer-item{
+        @include flex-basis(100%);
+      }
+      .item-heading::before{
+        @include position($top:-58px,$left:51%);
+        @include transform(translate(-51%, -58%));
+      }
+    }
   }
 }
 
@@ -402,6 +434,24 @@
           padding: 16px 0 36px 5%;
         }
       }
+      @include for-mobile-screen{
+        .about-us{
+          .wrapper{
+            @include flex-direction(column);
+          }
+          @at-root{
+            .about-content{
+              margin: 50px 0;
+            }
+            .about-ctrl {
+              text-align: center;
+          }
+          .about-item{
+            @include displayFlex();
+          }
+          }
+        }
+      }
     }
   }
 }
@@ -473,6 +523,23 @@
       .work-item:nth-child(3){
         margin-top: 100px;
       }
+    }
+    @include for-mobile-screen{
+      .work{
+        padding: 75px 0 35px 0;
+      }
+      .work-list{
+        @include flex-direction(column);
+        .work-item{
+          margin: 50px 0;
+          text-align: center;
+        }
+        .sub-heading::before{
+          @include position($bottom:30%,$left:50%);
+          @include transform( translate(-50%, 0));
+        }
+      }
+      
     }
   }
 }
@@ -573,6 +640,14 @@
         .faq-list{
           margin: 0;
         }
+      }
+      @include for-mobile-screen{
+        section.FAQ {
+          padding: 50px 0 0 0;
+          figure{
+            width: 100%;
+          }
+      }
       }
     }
   }
@@ -719,6 +794,36 @@
         padding-top: 25px;
       }
     }
+    @include for-mobile-screen{
+      .testimonial {
+        padding: 91px 0 70px;
+        @at-root{
+        .content-wrap {
+          margin-bottom: 130px;
+          @include flex-direction(column);
+        }
+        .left::before{
+          @include position($top:60px,$left:-73px);
+        }
+        .right::before{
+          @include position($top:60px,$left:18px);
+        }
+        .feedback-description{
+          text-align: center;
+        }
+        .name{
+          text-align: center;
+        }
+        .slide-image-list{
+          padding: 0;
+          @include flex-direction(column);
+          li{
+            margin: 15px 0;
+          }
+        }
+      }
+    }
+    }
   }
 }
 
@@ -775,6 +880,23 @@
           @include flex-basis(60%);
           @include font(35px);
         }
+    }
+    @include for-mobile-screen{
+      @at-root{
+      .loan{
+        padding: 70px 0;
+        .wrapper{
+          @include flex-direction(column);
+          .loan-description{
+            @include font(28px);
+            text-align: center;
+          }
+          .apply-btn{
+            margin: 20px 0;
+          }
+        }
+      }
+    }
     }
   }
 }
@@ -1005,6 +1127,15 @@ footer {
       }
       .icon::before{
         @include position($left:-3px);
+      }
+    }
+    @include for-mobile-screen{
+      footer {
+        padding-top: 45px;
+    }
+      .footer-list{
+        padding-bottom: 20px;
+        @include flex-direction(column);
       }
     }
   }
