@@ -584,3 +584,197 @@
 }
 
 /*loan section end here*/
+/*footer start here*/
+footer {
+  padding: 143px 0 0;
+
+  @at-root {
+    .footer-list {
+      padding-bottom: 130px;
+      @extend %flex-repeat;
+      // @include justify-content(space-between);
+    }
+
+    .footer-item:nth-child(1) {
+      @include flex-basis(19.2%);
+    }
+
+    .footer-item:nth-child(2) {
+      @include flex-basis(12.4%);
+      margin-left: 16%;
+    }
+
+    .footer-item:nth-child(3) {
+      @include flex-basis(14%);
+      margin-left: 5.2%;
+    }
+    .footer-item:nth-child(4) {
+      @include flex-basis(33%);
+      margin-left: 3.6%;
+    }
+
+    .footer-logo {
+      padding-bottom: 40px;
+    }
+
+    .contact {
+      @extend %flex-repeat;
+      @include flex-direction(column);
+    }
+
+    .contact-item {
+      color: $form-content;
+      @include font(14px, 500);
+    }
+
+    .contact-link {
+      @extend .contact-item;
+      @extend %transition-repeat;
+      line-height: 25px;
+
+      @include for-hover-only {
+        &:hover {
+          color: $form-heading;
+        }
+      }
+    }
+
+    address {
+      line-height: 25px;
+    }
+
+    .social-list {
+      padding-top: 48px;
+    }
+
+    .social-item {
+      margin-left: 23.4%
+    }
+
+    .icon {
+      @extend %relative;
+      text-indent: -9999px;
+      cursor: pointer;
+      @extend %transition-repeat;
+
+      @include for-hover-only {
+        &:hover::before {
+          border-color: $btn-color;
+          color: $btn-color;
+        }
+      }
+
+      &::before {
+        @include contentBefore(\f39e, $float: left);
+        width: 37px;
+        height: 37px;
+        border: 1px solid #dadada;
+        @extend %flex-repeat;
+        @extend %align-repeat;
+        @include justify-content(center);
+        @include position(absolute, $top: 0, $left: -45px);
+        @include font($family: "FontAwesome");
+        color: #dadada;
+        @include font(16px);
+        border-radius: 50%;
+        text-indent: 0;
+      }
+    }
+
+    .google::before {
+      @include contentBefore(\f0d5);
+    }
+
+    .twitter::before {
+      @include contentBefore(\f099);
+    }
+
+    .instagram::before {
+      @include contentBefore(\f16d);
+    }
+
+    .footer-heading {
+      padding-bottom: 40px;
+      color: $work;
+      @include font(17px, 500);
+    }
+
+    .web-list {
+      @extend %flex-repeat;
+      @include flex-direction(column);
+    }
+
+    .web-link {
+      color: $form-content;
+      @include font(13px);
+      line-height: 35px;
+      @extend %transition-repeat;
+      @include for-hover-only{
+        &:hover{
+          color: $form-heading;
+        }
+      }
+    }
+
+    .sub-description {
+      color: $form-content;
+      @include font(13px);
+      line-height: 35px;
+    }
+
+    .input-sub {
+      margin-bottom: 14px;
+      @extend %flex-repeat;
+      border: 2px solid #eee;
+      border-radius: 4px;
+    }
+
+    .input-content {
+      width: 100%;
+
+      input {
+        width: 100%;
+        padding: 15px 0 15px 8%;
+        border: none;
+        outline: none;
+        padding-left: 8%;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    .submit{
+      padding: 13px 21px;
+      margin: 2px;
+      border: 1px solid #4183F0;
+      border-radius: 6px;
+      background-color: #4183F0;
+      color: $white;
+      @extend %transition-repeat;
+      @include for-hover-only{
+        &:hover{
+          color: $btn-color;
+          background-color: $white;
+          border-color: $btn-color;
+        }
+      }
+
+    }
+    .copy{
+      padding-bottom: 8px;
+      color: $form-content;
+      text-align: center;
+    }
+    .copy-link{
+      color: #569FFF;
+      @extend %transition-repeat;
+      @include for-hover-only{
+        &:hover{
+          color: $FAQ;
+        }
+      }
+    }
+  }
+}
+
+
+/* footer end here*/
