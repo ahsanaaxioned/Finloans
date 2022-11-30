@@ -184,6 +184,14 @@
           }
       }
       }
+      @include for-small-screen{
+        .banner {
+          padding: 145px 0 100px 0;
+      }
+        .form-heading{
+          @include font(19px);
+        }
+      }
     }
   }
 }
@@ -452,6 +460,14 @@
           }
         }
       }
+      @include for-small-screen{
+        .about-list {
+          padding: 16px 0 36px 8%;
+      }
+      .about-content {
+        margin: 50px 2%;
+    }
+      }
     }
   }
 }
@@ -540,6 +556,14 @@
         }
       }
       
+    }
+    @include for-small-screen{
+      .work {
+        padding: 45px 0 0px 0;
+    }
+    .offer-span {
+      padding-bottom: 10px;
+  }
     }
   }
 }
@@ -648,6 +672,14 @@
             width: 100%;
           }
       }
+      }
+      @include for-small-screen{
+        .faq-heading{
+          @include font(39px);
+        }
+        .faq-sub-heading {
+          padding: 26px 0 18px 12.4%;
+        }
       }
     }
   }
@@ -824,6 +856,13 @@
       }
     }
     }
+    @include for-small-screen{
+      .content-wrap{
+        .feedback-description{
+          @include font(16px)
+        }
+      }
+    }
   }
 }
 
@@ -898,6 +937,19 @@
       }
     }
     }
+    @include for-small-screen{
+      @at-root{
+      .loan{
+        padding: 60px 0;
+        .wrapper{
+          .loan-description{
+            @include font(26px);
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
   }
 }
 
@@ -1136,6 +1188,24 @@ footer {
       .footer-list{
         padding-bottom: 20px;
         @include flex-direction(column);
+      }
+    }
+    @include for-small-screen{
+      .sub-description{
+        line-height: 25px;
+      }
+      .input-content{
+        input{
+          padding: 8px 0 15px 8%;
+        }
+      }
+      .submit{
+        padding: 9px 14px;
+      }
+      .copy{
+        padding-bottom: 14px;
+        @include font(14px);
+        line-height: 25px;
       }
     }
   }

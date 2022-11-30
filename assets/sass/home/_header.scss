@@ -203,6 +203,26 @@ header {
             }
           }
         }
+        @include for-small-screen{
+          .wrapper{
+            width: 92%;
+          }
+          .apply-btn{
+          margin-right: 22%;
+          @include flex-basis(55%);
+          @include flex-direction(column);
+          }
+          .btn-apply{
+            padding: 6px 4px;
+          }
+          .btn-link{
+            margin-bottom: 8px;
+            &::before{
+              @include position($top:2px,$left:-14px);
+              @include font(10px);
+            }
+          }
+        }
       }
     }
   }

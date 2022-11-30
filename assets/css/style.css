@@ -354,6 +354,32 @@ header .wrapper {
     padding: 9px 9px;
   }
 }
+@media (max-width: 480px) {
+  .wrapper {
+    width: 92%;
+  }
+  .apply-btn {
+    margin-right: 22%;
+    -ms-flex-preferred-size: 55%;
+    flex-basis: 55%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    flex-direction: column;
+  }
+  .btn-apply {
+    padding: 6px 4px;
+  }
+  .btn-link {
+    margin-bottom: 8px;
+  }
+  .btn-link::before {
+    top: 2px;
+    left: -14px;
+    font-size: 10px;
+  }
+}
 
 /*header css end here*/
 /* banner section start here*/
@@ -539,6 +565,14 @@ select {
   }
   .my-form {
     padding: 50px 10.5%;
+  }
+}
+@media (max-width: 480px) {
+  .banner {
+    padding: 145px 0 100px 0;
+  }
+  .form-heading {
+    font-size: 19px;
   }
 }
 
@@ -813,6 +847,14 @@ select {
     display: flex;
   }
 }
+@media (max-width: 480px) {
+  .about-list {
+    padding: 16px 0 36px 8%;
+  }
+  .about-content {
+    margin: 50px 2%;
+  }
+}
 
 /*about-us section end here*/
 /*work section start here*/
@@ -907,6 +949,14 @@ select {
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+  }
+}
+@media (max-width: 480px) {
+  .work {
+    padding: 45px 0 0px 0;
+  }
+  .offer-span {
+    padding-bottom: 10px;
   }
 }
 
@@ -1018,6 +1068,14 @@ select {
   }
   section.FAQ figure {
     width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .faq-heading {
+    font-size: 39px;
+  }
+  .faq-sub-heading {
+    padding: 26px 0 18px 12.4%;
   }
 }
 
@@ -1200,6 +1258,11 @@ select {
     margin: 15px 0;
   }
 }
+@media (max-width: 480px) {
+  .content-wrap .feedback-description {
+    font-size: 16px;
+  }
+}
 
 /*testimonial section end here*/
 /*loan section start here*/
@@ -1268,6 +1331,15 @@ select {
   }
   .loan .wrapper .apply-btn {
     margin: 20px 0;
+  }
+}
+@media (max-width: 480px) {
+  .loan {
+    padding: 60px 0;
+  }
+  .loan .wrapper .loan-description {
+    font-size: 26px;
+    line-height: 40px;
   }
 }
 
@@ -1510,6 +1582,22 @@ address {
     -ms-flex-direction: column;
     flex-direction: column;
     flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .sub-description {
+    line-height: 25px;
+  }
+  .input-content input {
+    padding: 8px 0 15px 8%;
+  }
+  .submit {
+    padding: 9px 14px;
+  }
+  .copy {
+    padding-bottom: 14px;
+    font-size: 14px;
+    line-height: 25px;
   }
 }
 
